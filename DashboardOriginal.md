@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 from dash import Dash, html, dcc, dash_table, Input, Output
 import plotly.express as px
+import plotly.graph_objects as go
 
 ````
 
@@ -175,6 +176,7 @@ app.layout = html.Div(children = [
             
             dcc.Graph(
                 id = 'Revenue',
+                figure = fig1
             ),
             
         
@@ -362,7 +364,7 @@ app.layout = html.Div(children = [
 
 
 if __name__ == '__main__':
-  app.run_server(debug = True, use_reloader = False)
+    app.run_server(debug = True, use_reloader = False)
 
 ````
 
